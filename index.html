@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Rental Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            background-image: url("https://global.honda/en/stories/040/images/social.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            opacity: 1; /* Set the opacity of the entire body */
+        }
+        .container {
+            max-width: 600px;
+            margin: 10px auto;
+            background-color: rgba(255, 255, 255, 0.8); /* Set the background color with transparency */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #ddd;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="number"],
+        select,
+        input[type="text"],
+        input[type="date"],
+        input[type="email"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        /* Adjust the opacity of the form elements */
+        .container input,
+        .container select,
+        .container button {
+            opacity: 1;
+        }
+        /* Navigation Bar Styles */
+        nav {
+            background-color: #333;
+            overflow: hidden;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Aboutus.html">About Us</a></li>
+            <li><a href="Contactus.html">Contact Us</a></li>
+            <li><a href="Login.html">Login</a></li>
+        </ul>
+    </nav>
+    <h1>Welcome to Bike Rental Management System</h1>
+    <div class="container">
+        <form id="rentalForm">
+            <h2 style="text-align: center; margin-bottom: 20px;">Rent Bike</h2>
+            <div>
+                <label for="customerName">Name:</label>
+                <input type="text" id="customerName" name="customerName" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div>
+                <label for="numberOfBikes">Number of Bikes:</label>
+                <input type="number" id="numberOfBikes" name="numberOfBikes" min="1" required>
+            </div>
+            <div>
+                <label for="dateOfRental">Rental Date:</label>
+                <input type="date" id="rentalDate" name="numberOfBikes" min="1" required>
+            </div>
+            <div>
+                <label for="rentalTime">Rental Time:</label>
+                <select id="rentalTime" name="rentalTime" required>
+                    <option value="">Select Time</option>
+                    <option value="1">1 hour</option>
+                    <option value="2">2 hours</option>
+                    <option value="3">3 hours</option>
+                    <option value="4">4 hours</option>
+                    <option value="6">6 hours</option>
+                    <option value="12">12 hours</option>
+                    <option value="24">24 hours</option>
+                </select>
+            </div>
+            <div>
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required>
+            </div>
+            <br>    
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
